@@ -28,42 +28,151 @@
             <ColumnDefinition Width="Auto"/>
 
         </Grid.ColumnDefinitions>
+            
+        <!--HEADER-->
 
-        <!-- HEADER -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/> <!-- NAME-->
+                <ColumnDefinition Width="*"/> <!-- SPACE -->
+                <ColumnDefinition Width="Auto"/> <!-- HP-->
+            </Grid.ColumnDefinitions>
+            
+            
+            <!-- NAME-->
+            <Border Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
+                <TextBlock Text="Name" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            </Border>
 
-        <Border Grid.Row="0" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="HEADER" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!-- EMPTY SPACE-->
+            <Border Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
+                <TextBlock Text="(empty)" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </Border>
+
+            <!-- HP-->
+            <Border Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
+                <TextBlock Text="HP" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            
+        </Grid>
+
+        <!-- IMAGE ROW -->
+        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="0" BorderBrush="Yellow" BorderThickness="1" Background="LightGray">
+            <Rectangle Width="330" Height="250" Fill="DarkBlue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <!-- SUB INFO ROW 2 -->
+        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="0" BorderBrush="Yellow" BorderThickness="1">
+            <TextBlock Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center" FontSize="9"/>
         </Border>
         
-        <!-- PICTURE AREA -->
-        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <Rectangle Width="200" Height="200" Fill="DarkGray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        
-        <!--SUB INFO-->
-        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="3" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="SUB INFO" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <!-- ATTACK 1 ROW 3-->
+        <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="0, 30, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!-- ATTACK HEADER-->
+                <RowDefinition Height="Auto"/> <!-- ATTACK DESCRIPTION-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/> <!-- ICON -->
+                <ColumnDefinition Width="*"/> <!-- NAME -->
+                <ColumnDefinition Width="Auto"/> <!-- DAMAGE -->
+            </Grid.ColumnDefinitions>
+            
+            <!-- HEADER ROW -->
+            <Border Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+                <TextBlock Text="ICON"/>
+            </Border>
+
+
+            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+                <TextBlock Text="ATTACK NAME" TextAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+                <TextBlock Text="DAMAGE"/>
+            </Border>
+
+            <!-- DESCRIPTION ROW-->
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Margin="0, 2">
+                <TextBlock FontSize="8" Text="ATTACK DESCRIPTION GOES HERE, GUUGUUUUUUUUU GAGAAAAAAAA MAMAAAAAAAAAAAAAAAAAAAAAA MIAAAAAA" TextWrapping="Wrap"/>
+            </Border>
+            </Grid>
+            
+
+
+
+    <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="0, 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="ICON"/>
         </Border>
 
-        <!-- MOVE 1 -->
-        <Border Grid.Row="3" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="MOVE 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="ATTACK NAME" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
 
-        <!-- MOVE 2 -->
-        <Border Grid.Row="4" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="MOVE 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="DAMAGE"/>
         </Border>
 
-        <!--WEAK/RETREAT/RESIST-->
-        <Border Grid.Row="5" Grid.ColumnSpan="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="WEAK/RESIST/RETREAT" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
-        
-        <!--FOOTER-->
-        <Border Grid.Row="6" Grid.Column="3" Margin="5" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="FOOTER" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Border>
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="0"  Margin="0">
+                <TextBlock FontSize="8" Text="ATTACK DESCRIPTION GOES HERE, shirororororroo MAMAAAAAAAAAAAAAAAAAAAAAA MIAAAAAA" TextWrapping="Wrap"/>
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Row="5" Grid.ColumnSpan="3" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
+                <TextBlock Text="WEAKNESS" FontSize="6"/>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
+                <TextBlock Text="RESISTANCE" FontSize="6"/>
+            </Border>
+
+            <Border Grid.Column="2" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
+                <TextBlock Text="RETREAT" FontSize="6"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="6" Grid.ColumnSpan="3" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2">
+                <TextBlock FontSize="8" Text="ICON ICON # SET"/>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2">
+                <TextBlock FontSize="8" Text="COPYRIGHT TEXT"/>
+            </Border>
+
+            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0" Padding="3" Margin="2">
+                <TextBlock FontSize="6" Text="VERY GOOD VERY NICE AND FANTASTIC" TextWrapping="Wrap"/>
+            </Border>
+            
+        </Grid>
 
     </Grid>
 </Window>
+
