@@ -80,7 +80,7 @@
             
             <!-- HEADER ROW -->
             <Border Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="ICON"/>
+                <TextBlock Text="ICONN"/>
             </Border>
 
 
