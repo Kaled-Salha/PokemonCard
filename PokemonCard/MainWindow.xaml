@@ -65,17 +65,17 @@
                         <GradientStop Color="#FFADA7A7" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <TextBlock Text="BASIC" FontSize="7" FontFamily="MV Boli" FontWeight="Bold"/>
+                <TextBlock x:Name="NameTextBlock" Text="Psyduck" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontWeight="Bold" FontSize="18"/>
             </Border>
 
             <!-- EMPTY SPACE-->
             <Border Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Margin="0,0,0,2" Padding="0,2,2,2">
-                <TextBlock Text="Psyduck" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontWeight="Bold" FontSize="18"/>
+                <Button Content="Choose Pokemon" Click="OpenSelectionWindowClick"/>
             </Border>
 
             <!-- HP-->
             <Border Grid.Column="2" BorderBrush="Transparent" BorderThickness="0" Margin="-1" Padding="5">
-                <Image Source="Screenshot 2025-10-01 213413.png" Width="70" Height="25"/>
+                <TextBlock x:Name="HpTextBlock" Text="HP" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontWeight="Bold" FontSize="18"/>
             </Border>
 
         </Grid>
@@ -87,7 +87,7 @@
 
         <!-- SUB INFO ROW 2 -->
         <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="0" BorderBrush="DimGray" BorderThickness="1">
-            <TextBlock Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center" FontSize="9" Background="LightGray" UseLayoutRounding="False"/>
+            <TextBlock x:Name="SubInfoTextBlock" Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center" FontSize="9" Background="LightGray" UseLayoutRounding="False"/>
         </Border>
 
         <!-- ATTACK 1 ROW 3-->
@@ -109,21 +109,21 @@
 
             <!-- HEADER ROW -->
             <Border Grid.Row="0" Grid.Column="0" BorderBrush="White" Padding="1" Margin="0,0,2,0">
-                <Image Source="energy_colorless.png" Width="15" Height="15" Margin="5,10,0,11"/>
+                <TextBlock x:Name="Attack1IconTextBlock" Text="Icon" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
             </Border>
 
 
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="Overthink" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:Name="Attack1NameTextBlock" Text="Overthink" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
             </Border>
 
             <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="DAMAGE"/>
+                <TextBlock x:Name="Attack1DMGTextBlock" Text="DAMAGE"/>
             </Border>
 
             <!-- DESCRIPTION ROW-->
             <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="0" Margin="6,0,0,0">
-                <TextBlock FontSize="8" Text="During your opponent's next turn, whenever they flip a coin, treat it as tails." TextWrapping="Wrap"/>
+                <TextBlock x:Name="Attack1DescTextBlock" FontSize="8" Text="During your opponent's next turn, whenever they flip a coin, treat it as tails." TextWrapping="Wrap"/>
             </Border>
         </Grid>
 
@@ -145,19 +145,19 @@
 
 
             <Border Grid.Row="0" Grid.Column="0" BorderBrush="White" Padding="0" Margin="0">
-                <Image Source="sSSSSSSSSS.png" Width="50" Height="50" RenderTransformOrigin="0.233,0.508" Margin="-15,0,10,0"/>
+                <TextBlock x:Name="Attack2IconTextBlock" Text="Icon2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
             </Border>
 
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0" Padding="1" Margin="2">
-                <TextBlock Text="Water Gun" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,50,0"/>
+                <TextBlock x:Name="Attack2NameTextBlock" Text="Water Gun" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,50,0"/>
             </Border>
 
             <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="10" FontSize="15"/>
+                <TextBlock x:Name="Attack2DMGTextBlock" Text="10" FontSize="15"/>
             </Border>
 
             <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="0"  Margin="0">
-                <TextBlock FontSize="8" TextWrapping="Wrap"/>
+                <TextBlock x:Name="Attack2DescTextBlock" FontSize="8" TextWrapping="Wrap"/>
             </Border>
 
         </Grid>
@@ -170,15 +170,15 @@
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
-                <TextBlock Text="WEAKNESS" FontSize="6"/>
+                <TextBlock x:Name="WeaknessTextBlock" Text="WEAKNESS" FontSize="6"/>
             </Border>
 
             <Border Grid.Column="1" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
-                <TextBlock Text="RESISTANCE" FontSize="6"/>
+                <TextBlock x:Name="ResistanceTextBlock" Text="RESISTANCE" FontSize="6"/>
             </Border>
 
             <Border Grid.Column="2" BorderBrush="Yellow" BorderThickness="0, 1" Padding="5" Margin="2">
-                <TextBlock Text="RETREAT" FontSize="6"/>
+                <TextBlock x:Name="RetreatTextBlock" Text="RETREAT" FontSize="6"/>
             </Border>
         </Grid>
         <Grid Grid.Row="6" Grid.ColumnSpan="3" Margin="0">
@@ -189,15 +189,15 @@
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2,25,0,0">
-                <TextBlock FontSize="6" Text="ICON ICON # SET"/>
+                <TextBlock x:Name="SetNumberTextBlock" FontSize="6" Text="ICON ICON # SET"/>
             </Border>
 
             <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2,25,0,0">
-                <TextBlock FontSize="6" Text="COPYRIGHT TEXT"/>
+                <TextBlock FontSize="6" x:Name="CopyRightTextBlock" Text="COPYRIGHT TEXT"/>
             </Border>
 
             <Border Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="Transparent" BorderThickness="0" Padding="4,0,4,4" Margin="0,4,0,0">
-                <TextBlock Text="It is constantly wracked by a headache. When the headache turns intense, it begins using weird powers."
+                <TextBlock x:Name="FooterTextTextBlock" Text="It is constantly wracked by a headache. When the headache turns intense, it begins using weird powers."
                 FontSize="8" FontStyle="Italic" TextWrapping="Wrap"
                 TextAlignment="Right" Foreground="DarkSlateGray" FontFamily="Segoe UI" Margin="237,0,0,0"/>
             </Border>
