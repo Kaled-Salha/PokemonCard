@@ -6,21 +6,35 @@
         xmlns:local="clr-namespace:PokemonCard"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400">
-    <Grid Margin="20" Background="Beige">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0.494"/>
+            <GradientStop Color="#FF909090" Offset="0.921"/>
+            <GradientStop Color="#FF909090" Offset="0.14"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="12, 12, 12, 12" Background="LightBlue">
         <!-- ROWS FOR CARD SECTIONS -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/> <!-- HEADER -->
-            <RowDefinition Height="2*"/>    <!-- PICTURE -->
-            <RowDefinition Height="Auto"/> <!-- SUB INFO -->
-            <RowDefinition Height="*"/>  <!-- MOVE 1 -->
-            <RowDefinition Height="*"/>  <!-- MOVE 2 -->
-            <RowDefinition Height="Auto"/> <!-- WEAK/RESIST/RETREAT -->
-            <RowDefinition Height="Auto"/> <!-- FOOTER -->
+            <RowDefinition Height="Auto"/>
+            <!-- HEADER -->
+            <RowDefinition Height="2*"/>
+            <!-- PICTURE -->
+            <RowDefinition Height="Auto"/>
+            <!-- SUB INFO -->
+            <RowDefinition Height="*"/>
+            <!-- MOVE 1 -->
+            <RowDefinition Height="*"/>
+            <!-- MOVE 2 -->
+            <RowDefinition Height="Auto"/>
+            <!-- WEAK/RESIST/RETREAT -->
+            <RowDefinition Height="Auto"/>
+            <!-- FOOTER -->
 
 
 
         </Grid.RowDefinitions>
-        
+
         <!-- COLUMNS-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -28,64 +42,79 @@
             <ColumnDefinition Width="Auto"/>
 
         </Grid.ColumnDefinitions>
-            
+
         <!--HEADER-->
 
-        <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="6">
+        <Grid Grid.Row="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/> <!-- NAME-->
-                <ColumnDefinition Width="*"/> <!-- SPACE -->
-                <ColumnDefinition Width="Auto"/> <!-- HP-->
+                <ColumnDefinition Width="Auto"/>
+                <!-- NAME-->
+                <ColumnDefinition Width="*"/>
+                <!-- SPACE -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- HP-->
             </Grid.ColumnDefinitions>
-            
-            
+
+
             <!-- NAME-->
-            <Border Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="Name" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Border Grid.Column="0" BorderBrush="LightGray" Margin="0, 0, 10, 20" Padding="3,0,5,0" >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF887F7F"/>
+                        <GradientStop Color="White" Offset="0.407"/>
+                        <GradientStop Color="#FFADA7A7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Text="BASIC" FontSize="7" FontFamily="MV Boli" FontWeight="Bold"/>
             </Border>
 
             <!-- EMPTY SPACE-->
-            <Border Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="(empty)" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Border Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Margin="0,0,0,2" Padding="0,2,2,2">
+                <TextBlock Text="Psyduck" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Arial" FontWeight="Bold" FontSize="18"/>
             </Border>
 
             <!-- HP-->
-            <Border Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="HP" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Border Grid.Column="2" BorderBrush="Transparent" BorderThickness="0" Margin="-1" Padding="5">
+                <Image Source="Screenshot 2025-10-01 213413.png" Width="70" Height="25"/>
             </Border>
-            
+
         </Grid>
 
         <!-- IMAGE ROW -->
-        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="0" BorderBrush="Yellow" BorderThickness="1" Background="LightGray">
-            <Rectangle Width="330" Height="250" Fill="DarkBlue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="0" BorderBrush="Black" BorderThickness="1" Background="LightBlue">
+            <Image Source="Screenshot 2025-10-01 211725.png"/>
         </Border>
 
         <!-- SUB INFO ROW 2 -->
-        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="0" BorderBrush="Yellow" BorderThickness="1">
-            <TextBlock Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center" FontSize="9"/>
+        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="0" BorderBrush="DimGray" BorderThickness="1">
+            <TextBlock Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center" FontSize="9" Background="LightGray" UseLayoutRounding="False"/>
         </Border>
-        
+
         <!-- ATTACK 1 ROW 3-->
         <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="0, 30, 0, 0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/> <!-- ATTACK HEADER-->
-                <RowDefinition Height="Auto"/> <!-- ATTACK DESCRIPTION-->
+                <RowDefinition Height="Auto"/>
+                <!-- ATTACK HEADER-->
+                <RowDefinition Height="Auto"/>
+                <!-- ATTACK DESCRIPTION-->
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/> <!-- ICON -->
-                <ColumnDefinition Width="*"/> <!-- NAME -->
-                <ColumnDefinition Width="Auto"/> <!-- DAMAGE -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- ICON -->
+                <ColumnDefinition Width="*"/>
+                <!-- NAME -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- DAMAGE -->
             </Grid.ColumnDefinitions>
-            
+
             <!-- HEADER ROW -->
-            <Border Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="ICONN"/>
+            <Border Grid.Row="0" Grid.Column="0" BorderBrush="White" Padding="1" Margin="0,0,2,0">
+                <Image Source="energy_colorless.png" Width="15" Height="15" Margin="5,10,0,11"/>
             </Border>
 
 
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="ATTACK NAME" TextAlignment="Center"/>
+                <TextBlock Text="Overthink" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
             </Border>
 
             <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
@@ -93,42 +122,42 @@
             </Border>
 
             <!-- DESCRIPTION ROW-->
-            <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Margin="0, 2">
-                <TextBlock FontSize="8" Text="ATTACK DESCRIPTION GOES HERE, GUUGUUUUUUUUU GAGAAAAAAAA MAMAAAAAAAAAAAAAAAAAAAAAA MIAAAAAA" TextWrapping="Wrap"/>
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="0" Margin="6,0,0,0">
+                <TextBlock FontSize="8" Text="During your opponent's next turn, whenever they flip a coin, treat it as tails." TextWrapping="Wrap"/>
             </Border>
-            </Grid>
-            
+        </Grid>
 
 
 
-    <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="0, 20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
 
-        </Grid.RowDefinitions>
+        <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="0, 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
 
-        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-            <TextBlock Text="ICON"/>
-        </Border>
+            <Border Grid.Row="0" Grid.Column="0" BorderBrush="White" Padding="0" Margin="0">
+                <Image Source="sSSSSSSSSS.png" Width="50" Height="50" RenderTransformOrigin="0.233,0.508" Margin="-15,0,10,0"/>
+            </Border>
 
-            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-            <TextBlock Text="ATTACK NAME" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Border>
+            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0" Padding="1" Margin="2">
+                <TextBlock Text="Water Gun" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,50,0"/>
+            </Border>
 
             <Border Grid.Row="0" Grid.Column="2" BorderBrush="Transparent" BorderThickness="1" Padding="5" Margin="2">
-            <TextBlock Text="DAMAGE"/>
-        </Border>
+                <TextBlock Text="10" FontSize="15"/>
+            </Border>
 
             <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" BorderBrush="Transparent" BorderThickness="0"  Margin="0">
-                <TextBlock FontSize="8" Text="ATTACK DESCRIPTION GOES HERE, shirororororroo MAMAAAAAAAAAAAAAAAAAAAAAA MIAAAAAA" TextWrapping="Wrap"/>
+                <TextBlock FontSize="8" TextWrapping="Wrap"/>
             </Border>
 
         </Grid>
@@ -159,18 +188,20 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2">
-                <TextBlock FontSize="8" Text="ICON ICON # SET"/>
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2,25,0,0">
+                <TextBlock FontSize="6" Text="ICON ICON # SET"/>
             </Border>
 
-            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2">
-                <TextBlock FontSize="8" Text="COPYRIGHT TEXT"/>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0" Padding="5" Margin="2,25,0,0">
+                <TextBlock FontSize="6" Text="COPYRIGHT TEXT"/>
             </Border>
 
-            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0" Padding="3" Margin="2">
-                <TextBlock FontSize="6" Text="VERY GOOD VERY NICE AND FANTASTIC" TextWrapping="Wrap"/>
+            <Border Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="Transparent" BorderThickness="0" Padding="4,0,4,4" Margin="0,4,0,0">
+                <TextBlock Text="It is constantly wracked by a headache. When the headache turns intense, it begins using weird powers."
+                FontSize="8" FontStyle="Italic" TextWrapping="Wrap"
+                TextAlignment="Right" Foreground="DarkSlateGray" FontFamily="Segoe UI" Margin="237,0,0,0"/>
             </Border>
-            
+
         </Grid>
 
     </Grid>

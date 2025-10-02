@@ -8,4 +8,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="energy_colorless.png" />
+    <None Remove="images.jpeg" />
+    <None Remove="s-l1200.png" />
+    <None Remove="Screenshot 2025-10-01 211725.png" />
+    <None Remove="Screenshot 2025-10-01 213413.png" />
+    <None Remove="sSSSSSSSSS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="energy_colorless.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Screenshot 2025-10-01 211725.png" />
+    <Resource Include="Screenshot 2025-10-01 213413.png" />
+    <Resource Include="sSSSSSSSSS.png" />
+  </ItemGroup>
+
 </Project>
